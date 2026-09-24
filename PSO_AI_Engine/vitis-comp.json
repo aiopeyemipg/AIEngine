@@ -1,0 +1,17 @@
+{
+  "name": "PSO_AI_Engine",
+  "type": "AI_ENGINE",
+  "part": "xcvc1902-viva1596-3HP-e-S",
+  "configuration": {
+    "componentType": "AI_ENGINE",
+    "aieGraphFiles": [
+      "src/project.cpp"
+    ],
+    "aieCompilerOptions": "",
+    "aieCompilerConfigurations": [],
+    "configFiles": [
+      "aiecompiler.cfg"
+    ]
+  },
+  "template": "installed_aie_examples/simple"
+}

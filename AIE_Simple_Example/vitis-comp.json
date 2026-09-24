@@ -1,0 +1,17 @@
+{
+  "name": "AIE_Simple_Example",
+  "type": "AI_ENGINE",
+  "platform": "xilinx_vck190_base_202420_1",
+  "configuration": {
+    "componentType": "AI_ENGINE",
+    "aieGraphFiles": [
+      "src/project.cpp"
+    ],
+    "aieCompilerOptions": "",
+    "aieCompilerConfigurations": [],
+    "configFiles": [
+      "aiecompiler.cfg"
+    ]
+  },
+  "template": "installed_aie_examples/simple"
+}
