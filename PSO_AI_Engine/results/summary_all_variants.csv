@@ -1,0 +1,7 @@
+variant,dbscan,images,detected,undetected,pass,accuracy_pct,mean_iou
+StandardPSO,yes,1000,1000,0,939,93.90,0.803630
+StandardPSO,no,1000,1000,0,931,93.10,0.800693
+APSO,yes,1000,1000,0,938,93.80,0.804040
+APSO,no,1000,1000,0,934,93.40,0.800849
+SPPSO,yes,1000,1000,0,941,94.10,0.802212
+SPPSO,no,1000,1000,0,943,94.30,0.804010

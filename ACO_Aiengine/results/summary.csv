@@ -1,0 +1,3 @@
+variant,images,source,pass,accuracy_pct,mean_iou_all,ref_cpp_pass,ref_cpp_accuracy_pct,ref_cpp_mean_iou_all,mean_ms_reference_cpp,mean_ms_aie_serial,mean_ms_aie_parallel,threads,speedup_parallel_vs_reference,speedup_parallel_vs_serial,total_s_reference_cpp,total_s_aie_parallel
+FPED,1000,native bench (AIE code; threads),930,93.00,0.804342,953,95.3,0.807676,3.2334,1.19178,0.461804,6,7.00166,2.5807,3.2334,0.461804
+StdACO,1000,native bench (AIE code; threads),506,50.60,0.683278,523,52.3,0.681883,0.292173,0.120523,0.129652,6,2.25352,0.92959,0.292173,0.129652

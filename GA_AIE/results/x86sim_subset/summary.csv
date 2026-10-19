@@ -1,0 +1,2 @@
+variant,images,source,pass,accuracy_pct,mean_iou_all,ref_cpp_pass,ref_cpp_accuracy_pct,ref_cpp_mean_iou_all,mean_ms_reference_cpp,mean_ms_aie_serial,mean_ms_aie_parallel,threads,speedup_parallel_vs_reference,speedup_parallel_vs_serial,total_s_reference_cpp,total_s_aie_parallel
+ConventionalGA,100,AIE graph (x86sim),95,95.00,0.806548,95,95,0.801456,55.8384,33.0754,9.06969,6,6.15659,3.6468,5.58384,0.906969

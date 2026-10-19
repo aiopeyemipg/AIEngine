@@ -43,9 +43,27 @@ ${Vitis_AIE_COMPILER}
 )
 
 
-set(USER_COMPILER_OPTIONS
-
+# PSO variant built into the graph (vi 0..5, see src/kernels/include.h):
+#   cmake -DPSO_VARIANT=3 ...   -> Accelerated PSO without DBSCAN
+set(PSO_VARIANT
+0
+CACHE STRING
+"PSO variant index vi (0..5) built into the graph"
 )
+
+set(USER_COMPILER_OPTIONS
+--aie.Xpreproc=-DPSO_VARIANT=${PSO_VARIANT}
+)
+
+# Number of images (graph iterations); empty = include.h (1000).
+set(PSO_IMAGES
+""
+CACHE STRING
+"Images to detect (graph iterations)"
+)
+if(NOT "${PSO_IMAGES}" STREQUAL "")
+  list(APPEND USER_COMPILER_OPTIONS "--aie.Xpreproc=-DNUM_IMAGES=${PSO_IMAGES}")
+endif()
 
 
 ####    Start of variables auto-updated by the Vitis IDE. Do not modify.    ####

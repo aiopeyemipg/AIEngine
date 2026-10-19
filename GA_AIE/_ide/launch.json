@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GA_AIE_x86_1",
+      "debugType": "x86simulator",
+      "type": "gdb",
+      "x86SimOptions": "${workspaceFolder}/GA_AIE/build/x86sim/Work/options/x86sim.options",
+      "additionalArgs": "",
+      "request": "launch",
+      "target": "${workspaceFolder}/GA_AIE/build/x86sim/Work/pthread/sim.out",
+      "cwd": "${workspaceFolder}/GA_AIE/build/x86sim",
+      "gdbpath": "${env:XILINX_VITIS}/bin/xgdb",
+      "valuesFormatting": "prettyPrinters",
+      "env": {
+        "LD_LIBRARY_PATH": "/tools/Xilinx/Vitis/2024.2/tps/lnx64/python-3.8.3/lib:/tools/Xilinx/Vitis/2024.2/aietools/tps/lnx64/gcc/lib64/:/tools/Xilinx/Vitis/2024.2/tps/lnx64/cmake-3.24.2/libs/Ubuntu/24:/tools/Xilinx/Vitis/2024.2/tps/lnx64/cmake-3.24.2/libs/Ubuntu:/tools/Xilinx/Vitis/2024.2/tps/lnx64/cmake-3.24.2/libs:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o/Ubuntu/24:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o:/tools/Xilinx/Vitis/2024.2/tps/lnx64/python-3.8.3/lib:/tools/Xilinx/Vivado/2024.2/tps/lnx64/cmake-3.24.2/libs/Ubuntu/24:/tools/Xilinx/Vivado/2024.2/tps/lnx64/cmake-3.24.2/libs/Ubuntu:/tools/Xilinx/Vivado/2024.2/tps/lnx64/cmake-3.24.2/libs:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o/Ubuntu/24:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2024.2/lib/lnx64.o:/tools/Xilinx/Vivado/2024.2/tps/lnx64/python-3.8.3/lib:/tools/Xilinx/Vitis/2024.2/aietools/lib/lnx64.o",
+        "INPUTDIR": "../..",
+        "OUTPUTDIR": "./x86simulator_output",
+        "ASAN_OPTIONS": "detect_leaks=0",
+        "ASAN_SYMBOLIZER_PATH": "/tools/Xilinx/Vitis/2024.2/aietools/lnx64.o/tools/clang/bin/llvm-symbolizer",
+        "PACKAGEDIR": "./Work"
+      }
+    }
+  ]
+}

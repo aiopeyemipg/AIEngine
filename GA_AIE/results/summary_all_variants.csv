@@ -1,0 +1,4 @@
+variant,images,detected,undetected,pass,accuracy_pct,mean_iou
+ConventionalGA,1000,1000,0,939,93.90,0.794514
+MicroGA,1000,1000,0,860,86.00,0.749224
+IslandGA,1000,1000,0,937,93.70,0.797930

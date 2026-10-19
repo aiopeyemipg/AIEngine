@@ -47,6 +47,26 @@ set(USER_COMPILER_OPTIONS
 
 )
 
+# ABC variant built into the graph: 0 = HA-ABC (hollowness), 1 = SR-ABC (residual).
+# Empty = the default of src/kernels/include.h (HA-ABC), as in the Vitis IDE.
+set(ABC_VARIANT
+""
+CACHE STRING
+"ABC variant: 0 = HA-ABC, 1 = SR-ABC"
+)
+if(NOT "${ABC_VARIANT}" STREQUAL "")
+  list(APPEND USER_COMPILER_OPTIONS "--aie.Xpreproc=-DABC_VARIANT=${ABC_VARIANT}")
+endif()
+# Number of images (graph iterations); empty = include.h (1000).
+set(ABC_IMAGES
+""
+CACHE STRING
+"Images to detect (graph iterations)"
+)
+if(NOT "${ABC_IMAGES}" STREQUAL "")
+  list(APPEND USER_COMPILER_OPTIONS "--aie.Xpreproc=-DNUM_IMAGES=${ABC_IMAGES}")
+endif()
+
 
 ####    Start of variables auto-updated by the Vitis IDE. Do not modify.    ####
 

@@ -43,9 +43,28 @@ ${Vitis_AIE_COMPILER}
 )
 
 
-set(USER_COMPILER_OPTIONS
-
+# GA variant built into the graph: 0 = Conventional, 1 = Micro, 2 = Island.
+# One build = one variant; scripts/run_x86sim.sh builds each variant in
+# its own build directory (build/x86sim_<Variant>).
+set(GA_VARIANT
+0
+CACHE STRING
+"GA variant built into the graph (0 Conventional, 1 Micro, 2 Island)"
 )
+
+set(USER_COMPILER_OPTIONS
+--aie.Xpreproc=-DGA_VARIANT=${GA_VARIANT}
+)
+
+# Number of images (graph iterations); empty = include.h (1000).
+set(GA_IMAGES
+""
+CACHE STRING
+"Images to detect (graph iterations)"
+)
+if(NOT "${GA_IMAGES}" STREQUAL "")
+  list(APPEND USER_COMPILER_OPTIONS "--aie.Xpreproc=-DNUM_IMAGES=${GA_IMAGES}")
+endif()
 
 
 ####    Start of variables auto-updated by the Vitis IDE. Do not modify.    ####

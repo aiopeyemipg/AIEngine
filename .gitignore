@@ -19,3 +19,7 @@
 
 _ide/logs
 _ide/.wsdata
+# Per-project build output, Python caches and per-image plots (regenerate with scripts/make_figures.sh)
+**/build/
+**/__pycache__/
+**/results/*/figures/
